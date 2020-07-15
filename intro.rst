@@ -46,11 +46,11 @@ Creazione cartella media su storage box
    
    Step 1 Sub-account → Create
    
-   .. image:: img/robot1.PNG
+   .. image:: img/robot1.png
    
    Step 2 – scelgo la cartella e check su samba, webdav e external reachability e se mi ricordo metto un commento
    
-   .. image:: img/robot2.PNG
+   .. image:: img/robot2.png
    
    
 3. Salvo user e password su file *utenti_server_gishosting_e_storage.ods* che trovo nella cartella coordinamento/prodotti del NAS Gter 
@@ -58,15 +58,32 @@ Creazione cartella media su storage box
 4. Vado su nextcloud di quell’utente e rinomino la cartella media (**sarebbe meglio farlo con il client nextcloud su proprio PC e non da interfaccia web**) 
    
    
-5. Bisogna montare la cartella sul server
+5. Bisogna creare la cartella media sul server e impostare il mount con CIFS/SAMBA
+
+.. code-block:: bash
+
+mkdir /home/gter/nextcloud-data/**nomeutente**/files/**nomerepository**/media
+
+oppure 
+
+mkdir /home/gter/nextcloud-data/**nomeutente**/files/media
+
+qualora non ci sia il repository per quell'utente
+
+.. code-block:: bash
 
 nano /etc/fstab
 
+
+.. code-block:: bash
+
 //indirizzo_smb /mountpoint cifs soft,uid=33,gid=33,dir_mode=0755,username=us,password=pwd 0 0
 
-ad esempio:
+ad esempio se l'utente **u221008-sub3** fosse quello corrispondente alla cartella astergenova_STRADE:
 
-//u221008-sub3.your-storagebox.de/u221008-sub3 /home/gter/nextcloud-data/astergenova/files/STRADE/media cifs soft,uid=33,gid=33,dir_mode=0755,username=u221008-sub3,password=XXXXXXXXXXX 0 0
+.. code-block:: bash
+
+//**u221008-sub3**.your-storagebox.de/**u221008-sub3** /home/gter/nextcloud-data/**astergenova**/files/**STRADE**/media cifs soft,uid=33,gid=33,dir_mode=0755,username=u221008-sub3,password=XXXXXXXXXXX 0 0
 
 
 6. Montare la cartella 
