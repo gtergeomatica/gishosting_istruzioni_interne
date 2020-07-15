@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Gestione utenti su GisHosting
+Manuale di  GisHosting (ad uso interno)
 =====================================================================
 Contenuti:
 
