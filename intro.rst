@@ -62,35 +62,43 @@ Creazione cartella media su storage box
 
 .. code-block:: bash
 
-mkdir /home/gter/nextcloud-data/**nomeutente**/files/**nomerepository**/media
+   mkdir /home/gter/nextcloud-data/**nomeutente**/files/**nomerepository**/media
 
 oppure 
 
-mkdir /home/gter/nextcloud-data/**nomeutente**/files/media
+.. code-block:: bash
+
+   mkdir /home/gter/nextcloud-data/**nomeutente**/files/media
 
 qualora non ci sia il repository per quell'utente
 
 .. code-block:: bash
 
-nano /etc/fstab
+   nano /etc/fstab
 
 
 .. code-block:: bash
 
-//indirizzo_smb /mountpoint cifs soft,uid=33,gid=33,dir_mode=0755,username=us,password=pwd 0 0
+   //indirizzo_smb /mountpoint cifs soft,uid=33,gid=33,dir_mode=0755,username=us,password=pwd 0 0
 
 ad esempio se l'utente **u221008-sub3** fosse quello corrispondente alla cartella astergenova_STRADE:
 
 .. code-block:: bash
 
-//**u221008-sub3**.your-storagebox.de/**u221008-sub3** /home/gter/nextcloud-data/**astergenova**/files/**STRADE**/media cifs soft,uid=33,gid=33,dir_mode=0755,username=u221008-sub3,password=XXXXXXXXXXX 0 0
+   //**u221008-sub3**.your-storagebox.de/**u221008-sub3** /home/gter/nextcloud-data/**astergenova**/files/**STRADE**/media cifs soft,uid=33,gid=33,dir_mode=0755,username=u221008-sub3,password=XXXXXXXXXXX 0 0
 
 
 6. Montare la cartella 
+
+.. code-block:: bash   
+
    sudo mount -a
    
    
-7. E fare un sync dei dati su nextcloud 
+7. E fare un sync dei dati su nextcloud
+
+.. code-block:: bash
+
    cd /var/www/html/nextcloud/  
    sudo -u www-data php console.php files:scan --path="username/files/" 
 
@@ -107,7 +115,7 @@ Progetti particolari
 Form creazione utenti ASTER 
 -----------------------------------
 
-DA COMPLETARE ROBERTO
+DA COMPLETARE ROBERTA
 
 
 
