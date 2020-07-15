@@ -40,7 +40,7 @@ Sono sostanzialmente necessari 3 step:
 
 2. da amministazione LWC modificare il percorso al repository
 
-.. image:: img/lwc_mod_repo.png
+.. image:: img/lwc_mod_repo.PNG
 
 3. verificare presenza storagebox (LINK INDICE SEGUENTE TODO) e nel caso seguire passi da 1 a 4 e sostituire utente, password e nomerepository nel file /etc/fstab (step 5). 
 
