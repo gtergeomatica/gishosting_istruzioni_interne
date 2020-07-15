@@ -1,0 +1,8 @@
+---
+document:
+  description: "Breve tutorial che spiega come installare QGIS su Windows con l'OsGeo installer."
+  name: "Tutorial - Installare l'ultima versione e quella stabile (LTR) di QGIS semplicemnte su Windows"
+  tags:
+    - "QGIS"
+    - "OsGeo"
+    - "installazione"
