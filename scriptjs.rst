@@ -1,148 +1,22 @@
-Introduzione
-==================
+I file javascript di Lizmap
+============================
 
-GisHosting è il server su cloud basato sui software free ed open source *qgis-Server* e *Lizmap* ed è realizzato da `Gter srl`_  
+E' possibile estendere le funzionalità di Lizmap attraverso la creazione di appositi file javascript. Questi file sono disponibili su una repository github dedicata a questo link: https://github.com/3liz/lizmap-javascript-scripts . Altri si possono trovare nella cartella *lizmap-web-client/lizmap/install/qgis/media/js/* (basta rimuovere l'estensione .example per utilizzarli). La maggior parte di quelli che utilizziamo noi si trovano nella cartella della repository di Concert-Eaux.
 
+Questi file javascript vanno messi nella cartella della repository a questo percorso **repository/media/js/nome_progetto/** (ad esempio nel caso di Novara sarebbe **progetti_privati/media/js/nuovo_cs_novara/**). In questo modo caricando la pagina web del progetto nominato *nuovo_cs_novara* tutti i file javascript dentro la cartella corrispondente saranno eseguiti.
 
-Le componenti principali sono:
-* qgis server
-* Lizmap Web Client (nel seguito LWC)
-* nextcloud per la sincronizzazione file tra client e server
+La documentazione di Lizmap sui file javascript aggiuntivi si trova qui https://docs.lizmap.com/current/it/publish/advanced_lizmap_config.html#adding-your-own-javascript
 
 
+GoogleStreetView.js
+++++++++++++++++++++++++
+Aggiunge un pulsante alla toolbar di Lizmap che consente di aprire una finestra (tipo mini-dock) e visualizzare Google Street View cliccando su un punto della mappa. Richiede una API key Google che deve essere inserita nel file javascript e in particolare come contenuto (stringa) della variabile **gkey** (riga 4 del codice).
 
-DA COMPLETARE ROBERTO
+IMMAGINE DEL CODICE
 
+Le API Key Google di Gter si gestiscono da questo sito https://console.cloud.google.com/home/dashboard?project=gishosting utilizzando l'account gmail di Gter rischio.idrogeologico@gmail.com (vedi file drive per la pwd) o il proprio account gmail personale se abilitato a vedere anche i progetti dell'account di Gter.
+TUTTE le API Key create per GisHosting devono essere create all'interno del progetto **GisHosting OK** verificare quindi sempre che sia selezionato questo progetto come da immagine sotto
 
-
-
-
-Nuovo utente 
-===============================
-
-
-DA COMPLETARE ROBERTO
-
-
-Aggiunta opzione geoDB
-===============================
-
-
-DA COMPLETARE ROBERTO
-
-
-Creazione di un repository o modifica del nome all'interno della cartella utente 
-===================================================================================
-
-Sono sostanzialmente necessari 3 step:
-
-1. creare cartella per repository o rinominarla **avendo cura che la struttura del repository interna sia completa (es. cartella media) e eventuali cartelle dati** 
-
-2. da amministazione LWC modificare il percorso al repository
-
-.. image:: img/lwc_mod_repo.PNG
-
-3. verificare presenza storagebox (LINK INDICE SEGUENTE TODO) e nel caso seguire passi da 1 a 4 e sostituire utente, password e nomerepository nel file /etc/fstab (step 5). 
-
-
-
-
-
-Creazione cartella media su storage box
-============================================
-1. Con connessione ssh (es.mobaxterm)
-
-.. code-block:: bash
-
-   cd /mnt/dav/media_utenti_gishosting_upgrades
-   mkdir nomeutente_nomerepository
-
-2. vado su https://robot.your-server.de/storage con utente e password che trovo su drive
-   
-   Step 1 Sub-account → Create
-   
-   .. image:: img/robot1.png
-   
-   Step 2 – scelgo la cartella e check su samba, webdav e external reachability e se mi ricordo metto un commento
-   
-   .. image:: img/robot2.png
-   
-   
-3. Salvo user e password su file *utenti_server_gishosting_e_storage.ods* che trovo nella cartella coordinamento/prodotti del NAS Gter 
-   
-4. Vado su nextcloud di quell’utente e rinomino la cartella media (**sarebbe meglio farlo con il client nextcloud su proprio PC e non da interfaccia web**) 
-   
-   
-5. Bisogna creare la cartella media sul server e impostare il mount con CIFS/SAMBA
-
-.. code-block:: bash
-
-   mkdir /home/gter/nextcloud-data/**nomeutente**/files/**nomerepository**/media
-
-oppure 
-
-.. code-block:: bash
-
-   mkdir /home/gter/nextcloud-data/**nomeutente**/files/media
-
-qualora non ci sia il repository per quell'utente
-
-.. code-block:: bash
-
-   nano /etc/fstab
-
-
-.. code-block:: bash
-
-   //indirizzo_smb /mountpoint cifs soft,uid=33,gid=33,dir_mode=0755,username=us,password=pwd 0 0
-
-ad esempio se l'utente **u221008-sub3** fosse quello corrispondente alla cartella astergenova_STRADE:
-
-.. code-block:: bash
-
-   //**u221008-sub3**.your-storagebox.de/**u221008-sub3** /home/gter/nextcloud-data/**astergenova**/files/**STRADE**/media cifs soft,uid=33,gid=33,dir_mode=0755,username=u221008-sub3,password=XXXXXXXXXXX 0 0
-
-
-6. Montare la cartella 
-
-.. code-block:: bash   
-
-   sudo mount -a
-   
-   
-7. E fare un sync dei dati su nextcloud
-
-.. code-block:: bash
-
-   cd /var/www/html/nextcloud/  
-   sudo -u www-data php console.php files:scan --path="username/files/" 
-
-
-
-NB Qualora venga cambiato il nome di un repository è necessario rifare i passi 1-4 da capo (con nuovo utente e nuova pwd) e sostituire utente, password e nomerepository nel file /etc/fstab
-
-
-
-
-Progetti particolari
-===============================
-
-Form creazione utenti ASTER 
------------------------------------
-
-DA COMPLETARE ROBERTA
-
-
-
-
-Note finali
-**************************************************************
-
-
-* guida di lizmap: https://docs.lizmap.com/current/it/
-
-
-
-
+IMMAGINE DELLA SELEZIONE DEL PROGETTO
 
 .. _Gter srl: https://www.gter.it
