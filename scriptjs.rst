@@ -19,12 +19,16 @@ TUTTE le API Key create per GisHosting devono essere create all'interno del prog
 
 .. image:: img/progetto_api_google.PNG
 
-E' fondamentale creare tutte le API all'interno del progetto **GisHosting OK** perchè al momento è l'unico collegato a un account di fatturazione. Nello specifico è collegato all'account **GisHosting Billing** (CC BPM di Gter). Se infatti non c'è un account di fatturazione collegato al progetto Google la visualizzazione di Google Stret View viene corrota (es. visualizzazione tipo in negativo).
+E' fondamentale creare tutte le API all'interno del progetto **GisHosting OK** perchè al momento è l'unico collegato a un account di fatturazione. Nello specifico è collegato all'account **GisHosting Billing** (CC BPM di Gter). Se infatti non c'è un account di fatturazione collegato al progetto Google la visualizzazione di Google Stret View viene corrota (es. visualizzazione tipo in negativo). Se fosse necessario creare un nuovo progetto RICORDARSI di collegarlo all'account di fatturazione esistente o crearne uno nuovo (la creazione del nuovo account di fatturazione può essere fatta solo se collegati con l'account gmail di Gter).
+
+AAGIUNGERE SCREENSHOT PER LA CREAZIONE DEL PROGETTO, PER IL COLLEGAMENTO ALL'ACCPOUNT DI FATTURAZIONE E PER LA CREAZIONE DEL NUOVO ACCOUNT
 
 Per vedere l'elenco delle API del progetto **GisHosting OK** bisogna andare in --> vedi immagine sotto
 
 .. image:: img/elenco_api.png
 
 Attualmente utilizziamo per Concerteaux e Novara l' API nominata **gishosting street view cloud** mentre per Piacenza ne utilizziamo una ad hoc nominata **cs piacenza street view**. Qualora si voglia ggiungere questo javascript a un qualsiasi progetto che risiede sul server GisHosting si deve utilizzare la prima chiave, se invece si vuole utilizzare per un progetto che risiede su altro server, come nel caso di Piacenza, bisogna crearne una ad hoc ma sempre nel progetto Google **GisHosting OK**.
+
+AGGIUNGERE ISTRUZIONI PER CREARE NUOVA API KEY
 
 .. _Gter srl: https://www.gter.it
