@@ -29,6 +29,23 @@ Per vedere l'elenco delle API del progetto **GisHosting OK** bisogna andare in -
 
 Attualmente utilizziamo per Concerteaux e Novara l' API nominata **gishosting street view cloud** mentre per Piacenza ne utilizziamo una ad hoc nominata **cs piacenza street view**. Qualora si voglia ggiungere questo javascript a un qualsiasi progetto che risiede sul server GisHosting si deve utilizzare la prima chiave, se invece si vuole utilizzare per un progetto che risiede su altro server, come nel caso di Piacenza, bisogna crearne una ad hoc ma sempre nel progetto Google **GisHosting OK**.
 
-AGGIUNGERE ISTRUZIONI PER CREARE NUOVA API KEY
+CREARE UNA NUOVA API KEY
+
+E' possibile creare una nuova API Key sia dall'account gmail di Gter che da quelli personali (se autorizzati). L'importante è che venga create nel progetto **GisHosting OK**. Per creare una nuova API Key bisogna seguire questi step:
+
+* Andare nella pagina con l'elenco delle API Key esistenti (si veda immagine sopra)
+* Verificare che nel menù a tendina sia selezionato il progetto **GisHosting OK**. (si veda immagine sopra)
+* Cliccare su **+ CREATE CREDENTIALS** --> **APi KEYS**
+
+.. image:: img/new_api.png
+
+* Compare un pop up con la chiave appena creata, da qui cliccare su **RESTRICT KEY**
+* Si apre una pagina dove:
+  * dare un nome sensato alla Key possibilmente che riconduca al gishosting per cui è stata creata (es. quella di Piacenza)
+  * Come **Application Restriction** scegliere **HTTP referrers (website)**
+  * Specificare in **Website restriction** la url che deve essere autorizzata per l'utilizzo di quella chiava seguendo le regole di sintassi suggerite nella pagina (vedere comunque le altre chiavi come esempio)
+  * In **API restriction** selezionare **Restrict Key** e selezionare dal manù a tendina sotto l'API **Maps Javascript API**
+  * Cliccare su **Salva**
+
 
 .. _Gter srl: https://www.gter.it
