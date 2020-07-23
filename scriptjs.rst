@@ -21,6 +21,8 @@ TUTTE le API Key create per GisHosting devono essere create all'interno del prog
 
 E' fondamentale creare tutte le API all'interno del progetto **GisHosting OK** perchè al momento è l'unico collegato a un account di fatturazione. Nello specifico è collegato all'account **GisHosting Billing** (CC BPM di Gter). Se infatti non c'è un account di fatturazione collegato al progetto Google la visualizzazione di Google Stret View viene corrota (es. visualizzazione tipo in negativo). Se fosse necessario creare un nuovo progetto RICORDARSI di collegarlo all'account di fatturazione esistente o crearne uno nuovo (la creazione del nuovo account di fatturazione può essere fatta solo se collegati con l'account gmail di Gter).
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 **CREARE UN NUOVO PROGETTO**
 
 E' meglio creare un nuovo progetto dall'account gmail di Gter. Così resta un progetto dell'account di Gter condiviso con gli account personali. Per creare un nuovo progetto seguire questi step:
@@ -40,8 +42,21 @@ E' meglio creare un nuovo progetto dall'account gmail di Gter. Così resta un pr
 
 * Selezionare **Maps Javascript API** e cliccare su **ABILITA**
 
-Il progetto creato dovrebbe essere già collegato all'account di fatturazione.
+Il progetto creato dovrebbe essere già collegato all'account di fatturazione. In caso Contrario bisogna andare in --> vedi immagine sotto
 
+.. image:: img/link_account.png
+
+Cliccare quindi su **COLLEGA UN ACCOUNT DI FATTURAZIONE** e selezionare l'account di fatturazione di Gter (**GisHosting Billing**).
+
+.. image:: img/link_account2.png
+
+Ovviamente è possibile creare un nuovo account di fatturazione, basta cliccare su **GESTISCI ACCOUNT DI FATTURAZIONE** invece che su  **COLLEGA UN ACCOUNT DI FATTURAZIONE** e quindi su **Crea Account**.
+
+E' ovviamente possibile eliminare anche un progetto esistente o modificarlo basta andare in --> vedi immagine sotto e cliccare su **CHIUDI**. Il progetto verrà eliminato in 30 giorni ma disabilitato immediatamente.
+
+.. image:: img/elimina_prog.png
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Per vedere l'elenco delle API del progetto **GisHosting OK** bisogna andare in --> vedi immagine sotto
 
