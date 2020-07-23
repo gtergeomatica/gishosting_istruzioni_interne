@@ -40,6 +40,9 @@ E' possibile creare una nuova API Key sia dall'account gmail di Gter che da quel
 .. image:: img/new_api.png
 
 * Compare un pop up con la chiave appena creata, da qui cliccare su **RESTRICT KEY**
+
+.. image:: img/restrict_key.png
+
 * Si apre una pagina dove:
 
   * dare un nome sensato alla Key possibilmente che riconduca al gishosting per cui è stata creata (es. quella di Piacenza)
@@ -48,5 +51,6 @@ E' possibile creare una nuova API Key sia dall'account gmail di Gter che da quel
   * In **API restriction** selezionare **Restrict Key** e selezionare dal manù a tendina sotto l'API **Maps Javascript API**
   * Cliccare su **Salva**
 
+.. image:: img/prop_key.png
 
 .. _Gter srl: https://www.gter.it
