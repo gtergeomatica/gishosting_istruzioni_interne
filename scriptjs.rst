@@ -86,7 +86,7 @@ E' possibile creare una nuova API Key sia dall'account gmail di Gter che da quel
   * In **API restriction** selezionare **Restrict Key** e selezionare dal manù a tendina sotto l'API **Maps Javascript API**
   * Cliccare su **Salva**
 
-.. image:: img/prop_key.png
+.. image:: img/prop_api.png
 
 Una volta creata la Key è ovviamente possibile modificarne le caratteristiche (basta cliccare sul nome della chiave dall'elenco) o eliminarla.
 
