@@ -53,4 +53,6 @@ E' possibile creare una nuova API Key sia dall'account gmail di Gter che da quel
 
 .. image:: img/prop_key.png
 
+.. warning:: NON DIFFONDERE IN GIRO LE NOSTRE CHIAVI. C'è un limite di utilizzo gratuito oltre il quale poi si paga quindi è bene che le utilizziamo solo noi per i nostri scopi!
+
 .. _Gter srl: https://www.gter.it
