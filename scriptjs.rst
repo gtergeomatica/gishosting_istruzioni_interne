@@ -41,6 +41,7 @@ E' possibile creare una nuova API Key sia dall'account gmail di Gter che da quel
 
 * Compare un pop up con la chiave appena creata, da qui cliccare su **RESTRICT KEY**
 * Si apre una pagina dove:
+
   * dare un nome sensato alla Key possibilmente che riconduca al gishosting per cui è stata creata (es. quella di Piacenza)
   * Come **Application Restriction** scegliere **HTTP referrers (website)**
   * Specificare in **Website restriction** la url che deve essere autorizzata per l'utilizzo di quella chiava seguendo le regole di sintassi suggerite nella pagina (vedere comunque le altre chiavi come esempio)
