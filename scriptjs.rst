@@ -135,6 +135,6 @@ Aggiunge un pulsante alla toolbar di Lizmap che consente di aprire in una nuova 
 
 .. note::
 
- il file **add_help_button.js** include anche il codice per aprire il manuale in una lingua piuttosto che un altra in funzione della lingua impostata per il browser. Qualora non fosse necessario è sufficiente commentare le righe 18,19, 21-24
+ il file **add_help_button.js** che si trova nella repository di **Concerteaux** include anche il codice per aprire il manuale in una lingua piuttosto che un altra in funzione della lingua impostata per il browser. Qualora non fosse necessario è sufficiente commentare le righe 18,19, 21-24.
 
 .. _Gter srl: https://www.gter.it
