@@ -146,5 +146,22 @@ Di default Lizmap mostra i gruppi di layer nell'albero dei layer *"espansi"*. No
 .. hint::
  
  Attenzione, questo funziona solo per i gruppi il cui nome NON contiene spazi. E' quindi consigliato usare evitare spazi nei nomi dei gruppi in QGIS e eventualmente usare il plugin Lizmap per rinominarli.
- 
+
+metadata_home_button.js
++++++++++++++++++++++++++
+
+TO DO
+
+mouse_position.js
++++++++++++++++++++++++++
+
+TO DO
+
+refresh_layers.js
++++++++++++++++++++++++++
+
+"Refresha" ogni n millesecondi (definiti nel file js) i layer indicati nel file js. E' sufficiente inserire il nome del layer QGIS (stringa) nella lista nominata **rlayers** (riga 6) e i millesecondi nella variabile **refreshInterval** (riga 14). Il resto del codice va lasciato invariato.
+
+.. image:: img/refresh_layers.png
+
 .. _Gter srl: https://www.gter.it
