@@ -54,7 +54,7 @@ Creazione cartella media su storage box
 
 .. code-block:: bash
 
-   cd /mnt/dav/media_utenti_gishosting_upgrades
+   cd /mnt/dav/media_utenti_gishosting_upgrade
    mkdir nomeutente_nomerepository
 
 2. vado su https://robot.your-server.de/storage con utente e password che trovo su drive
@@ -93,7 +93,7 @@ altrimenti utilizzare questa
 
    sudo mkdir /home/gter/nextcloud-data/**nomeutente**/files/media
 
-qualora non ci sia il repository per quell'utente
+per montare la cartella media appena creata sul server editare il file /etc/fstab
 
 .. code-block:: bash
 
