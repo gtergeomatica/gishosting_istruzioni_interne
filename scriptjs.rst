@@ -12,7 +12,7 @@ Ad oggi i file javascript aggiuntivi che utilizziamo noi sono:
 * GoogleStreetView.js
 * add_3d_button.js (https://github.com/3liz/lizmap-web-client/issues/712 - https://github.com/3liz/lizmap-web-client/issues/374)
 * add_help_button.js
-* deactivate_tools.js
+* deactivate_tools.js - disattiva il tool Lizmap **locate** che è attivo di default
 * group_collaps.js
 * metadata_home_button.js
 * mouse_position.js
@@ -136,5 +136,15 @@ Aggiunge un pulsante alla toolbar di Lizmap che consente di aprire in una nuova 
 .. note::
 
  il file **add_help_button.js** che si trova nella repository di **Concerteaux** include anche il codice per aprire il manuale in una lingua piuttosto che un altra in funzione della lingua impostata per il browser. Qualora non fosse necessario è sufficiente commentare le righe 18,19, 21-24.
+ 
+group_collaps.js
++++++++++++++++++++
+Di default Lizmap mostra i gruppi di layer nell'albero dei layer *"espansi"*. Non c'è modo di impostare la visualizzazione dei gruppi *"compressi"* da QGIS o dal Plugin Lizmap, l'unico modo è utilizzare questo javascript. E' sufficeinte aggiungere una riga **$('#group-nomeGruppo td a.expander').click();** all'interno del contenuto della funzione inserendo il nome del gruppo di QGIS dopo **#group-**. Il gruppo con quel nome verrà visualizzato chiuso nell'albero dei layer.
 
+.. image:: img/group_collaps.png
+
+.. hint::
+ 
+ Attenzione, questo funziona solo per i gruppi il cui nome NON contiene spazi. E' quindi consigliato usare evitare spazi nei nomi dei gruppi in QGIS e eventualmente usare il plugin Lizmap per rinominarli.
+ 
 .. _Gter srl: https://www.gter.it
