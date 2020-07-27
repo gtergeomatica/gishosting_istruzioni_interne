@@ -125,5 +125,16 @@ Una volta creato il link è sufficiente cambiare la url al file html creato dal 
 .. warning::
 
  Al momento l'unico modo per visualizzare il risultato del plugin **qgis2threejs** è tramite un iframe (vedi issue linkate sopra) altrimenti con l'esempio proposto dagli  sviluppatori di Lizmap (http://mdouchin.github.io/lizmap-presentation/#/46) dà errore (non riesce a caricare i vari file javascript creati dal plugin).
+ 
+add_help_button.js
+++++++++++++++++++++++++
+
+Aggiunge un pulsante alla toolbar di Lizmap che consente di aprire in una nuova scheda del browser la pagina web del manuale (es. su readthedocs). E' sufficiente passare al metodo **window.open()** il link della pagina web che si vuole visualizzare.
+
+.. image:: img/add_help.png
+
+.. note::
+
+ il file **add_help_button.js** include anche il codice per aprire il manuale in una lingua piuttosto che un altra in funzione della lingua impostata per il browser. Qualora non fosse necessario è sufficiente commentare le righe 18,19, 21-24
 
 .. _Gter srl: https://www.gter.it
