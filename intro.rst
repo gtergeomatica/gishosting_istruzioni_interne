@@ -59,7 +59,7 @@ Creazione cartella media su storage box
 
 2. vado su https://robot.your-server.de/storage con utente e password che trovo su drive
    
-   Step 1 Sub-account → Create
+   Step 1 - Selezionare la Storage Box BX30 → Sub-account → Create
    
    .. image:: img/robot1.png
    
@@ -68,28 +68,36 @@ Creazione cartella media su storage box
    .. image:: img/robot2.png
    
    
-3. Salvo user e password su file *utenti_server_gishosting_e_storage.ods* che trovo nella cartella coordinamento/prodotti del NAS Gter 
+3. Salvo user e password su file *utenti_server_gishosting_e_storage.ods* che trovo nella cartella coordinamento/prodotti/GISHOSTING_GTER_IT/Admin del NAS Gter 
    
-4. Vado su nextcloud di quell’utente e rinomino la cartella media (**sarebbe meglio farlo con il client nextcloud su proprio PC e non da interfaccia web**) 
+4. Vado su nextcloud di quell’utente e rinomino la cartella media (**sarebbe meglio farlo con il client nextcloud su proprio PC e non da interfaccia web**, se ci sono tanti file dentro può comunque richiedere un po' di tempo) 
    
    
-5. Bisogna creare la cartella media sul server e impostare il mount con CIFS/SAMBA
+5. Bisogna creare la cartella media sul server e impostare il mount con CIFS/SAMBA, verificare quindi se esiste la cartella del repository per il **nomeutente**:
 
 .. code-block:: bash
 
-   mkdir /home/gter/nextcloud-data/**nomeutente**/files/**nomerepository**/media
-
-oppure 
+   cd /home/gter/nextcloud-data/**nomeutente**/files/
+   
+   ls
+   
+se nella cartella *files* c'è la cartella **nomerepository**, creare la catella utilizzando il comando sotto
 
 .. code-block:: bash
 
-   mkdir /home/gter/nextcloud-data/**nomeutente**/files/media
+   sudo mkdir /home/gter/nextcloud-data/**nomeutente**/files/**nomerepository**/media
+
+altrimenti utilizzare questa 
+
+.. code-block:: bash
+
+   sudo mkdir /home/gter/nextcloud-data/**nomeutente**/files/media
 
 qualora non ci sia il repository per quell'utente
 
 .. code-block:: bash
 
-   nano /etc/fstab
+   sudo nano /etc/fstab
 
 
 .. code-block:: bash
@@ -117,7 +125,9 @@ ad esempio se l'utente **u221008-sub3** fosse quello corrispondente alla cartell
    cd /var/www/html/nextcloud/  
    sudo -u www-data php console.php files:scan --path="username/files/" 
 
+8. trasferire i file dalla vecchia cartella media (quella rinominata al punto 4) a quella appena creata
 
+9. Eliminare la vecchia cartella media
 
 NB Qualora venga cambiato il nome di un repository è necessario rifare i passi 1-4 da capo (con nuovo utente e nuova pwd) e sostituire utente, password e nomerepository nel file /etc/fstab
 
