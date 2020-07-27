@@ -139,6 +139,7 @@ Aggiunge un pulsante alla toolbar di Lizmap che consente di aprire in una nuova 
  
 group_collaps.js
 +++++++++++++++++++
+
 Di default Lizmap mostra i gruppi di layer nell'albero dei layer *"espansi"*. Non c'è modo di impostare la visualizzazione dei gruppi *"compressi"* da QGIS o dal Plugin Lizmap, l'unico modo è utilizzare questo javascript. E' sufficeinte aggiungere una riga **$('#group-nomeGruppo td a.expander').click();** all'interno del contenuto della funzione inserendo il nome del gruppo di QGIS dopo **#group-**. Il gruppo con quel nome verrà visualizzato chiuso nell'albero dei layer.
 
 .. image:: img/group_collaps.png
@@ -163,5 +164,16 @@ refresh_layers.js
 "Refresha" ogni n millesecondi (definiti nel file js) i layer indicati nel file js. E' sufficiente inserire il nome del layer QGIS (stringa) nella lista nominata **rlayers** (riga 6) e i millesecondi nella variabile **refreshInterval** (riga 14). Il resto del codice va lasciato invariato.
 
 .. image:: img/refresh_layers.png
+
+remove_group_check.js
++++++++++++++++++++
+
+Rimuove la checkbox sul gruppo che permette di accendere/spegnere in contemporanea tutti i layer contenuti nel gruppo. E' sufficeinte aggiungere una riga **$('#group-nomeGruppo td button.btn').remove();** all'interno del contenuto della funzione inserendo il nome del gruppo di QGIS dopo **#group-**.
+
+.. image:: img/remove_checkbox.png
+
+.. hint::
+ 
+ Attenzione, questo funziona solo per i gruppi il cui nome NON contiene spazi. E' quindi consigliato usare evitare spazi nei nomi dei gruppi in QGIS e eventualmente usare il plugin Lizmap per rinominarli.
 
 .. _Gter srl: https://www.gter.it
