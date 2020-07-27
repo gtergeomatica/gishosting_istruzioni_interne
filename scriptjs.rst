@@ -7,6 +7,27 @@ Questi file javascript vanno messi nella cartella della repository a questo perc
 
 La documentazione di Lizmap sui file javascript aggiuntivi si trova qui https://docs.lizmap.com/current/it/publish/advanced_lizmap_config.html#adding-your-own-javascript
 
+Ad oggi i file javascript aggiuntivi che utilizziamo noi sono:
+
+* GoogleStreetView.js
+* add_3d_button.js
+* add_help_button.js
+* deactivate_tools.js
+* group_collaps.js
+* metadata_home_button.js
+* mouse_position.js
+* refresh_layers.js
+* remove_group_check.js
+* translation.js
+* welcome_popup.js
+* valuemap_table.js
+* grouptimetool.js (https://github.com/Brun04/group-timetool - https://github.com/3liz/lizmap-javascript-scripts/pull/26)
+
+**WORK IN PROGRESS**
+
+* valuemap_filter.js (https://github.com/3liz/lizmap-web-client/issues/1674 - https://github.com/3liz/lizmap-web-client/issues/747)
+* metadata.js (https://github.com/Brun04/LayerMetadata2Database)
+
 
 GoogleStreetView.js
 ++++++++++++++++++++++++
