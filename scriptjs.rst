@@ -10,7 +10,7 @@ La documentazione di Lizmap sui file javascript aggiuntivi si trova qui https://
 Ad oggi i file javascript aggiuntivi che utilizziamo noi sono:
 
 * GoogleStreetView.js
-* add_3d_button.js
+* add_3d_button.js (https://github.com/3liz/lizmap-web-client/issues/712 - https://github.com/3liz/lizmap-web-client/issues/374)
 * add_help_button.js
 * deactivate_tools.js
 * group_collaps.js
@@ -20,7 +20,7 @@ Ad oggi i file javascript aggiuntivi che utilizziamo noi sono:
 * remove_group_check.js
 * translation.js
 * welcome_popup.js
-* valuemap_table.js
+* valuemap_table.js (https://github.com/3liz/lizmap-web-client/pull/1712 - https://github.com/3liz/lizmap-javascript-scripts/pull/25)
 * grouptimetool.js (https://github.com/Brun04/group-timetool - https://github.com/3liz/lizmap-javascript-scripts/pull/26)
 
 **WORK IN PROGRESS**
@@ -112,5 +112,18 @@ E' possibile creare una nuova API Key sia dall'account gmail di Gter che da quel
 Una volta creata la Key è ovviamente possibile modificarne le caratteristiche (basta cliccare sul nome della chiave dall'elenco) o eliminarla.
 
 .. warning:: NON DIFFONDERE IN GIRO LE NOSTRE CHIAVI. C'è un limite di utilizzo gratuito oltre il quale poi si paga quindi è bene che le utilizziamo solo noi per i nostri scopi!
+
+add_3d_button.js
+++++++++++++++++++++++++
+
+Aggiunge un pulsante alla toolbar di Lizmap che consente di aprire un bottom-dock (in basso come per le tabelle attributi) e visualizzareun l'html creato con il Plugin QGIS **qgis2threejs** tramite un iframe. L'html così come tutti i file e le cartelle create dal plugin devono essere salvati nella cartella media che deve essere raggiungibile via web. Per fare questo è necessario creare un symbolic link sulla cartella apache (/var/www/html/) alla cartella media della repository **(@ ROBERTO puoi aggiungere le istruzioni per creare il link?)**
+
+Una volta creato il link è sufficiente cambiare la url al file html creato dal plugin qgis2threejs nell'attributo **src** del tag **iframe** del file add_3d_button.js (riga 41).
+
+.. image:: img/3d_button.png
+
+.. warning::
+
+ Al momento l'unico modo per visualizzare il risultato del plugin **qgis2threejs** è tramite un iframe (vedi issue linkate sopra) altrimenti con l'esempio proposto dagli  sviluppatori di Lizmap (http://mdouchin.github.io/lizmap-presentation/#/46) dà errore (non riesce a caricare i vari file javascript creati dal plugin).
 
 .. _Gter srl: https://www.gter.it
