@@ -275,4 +275,15 @@ Il contenuto del popup deve poi essere "costruito" inserendo il codice html nell
 valuemap_table.js
 ++++++++++++++++++++++++++++
 
+Questo file javascript permette di visualizzare, nel tool **Tabella Attributi di Lizmap**, la descrizione invece del codice per le colonne della tabella con widget ValueMap. Di default infatti, nel tool Tabella Attributi di Lizmap viene visualizzato il codice e non la descrizione del ValueMap. Lo script richiede l'elenco dei layer su cui agire e una tabella in cui deve essere indicato il codice, la descrizione e il nome della colonna. Questa tabella deve essere pubblicata come layer in lizmap (non mettendola in legenda).
+La tabella può essere automaticamente compilata utilizzando lo script python *get_cod_label_widget.py*.
+
+Per utilizzare questo script è quindi necessario inserire i nomi dei layer (quelli dell'albero dei layer di QGIS) nella lista nominata **layers_to_translate** (riga 6) e il nome della tabella contente codice, la descrizione e il nome della colonna nella variabile **translation_layer** (riga 16).
+
+.. image:: img/table_VM.png
+
+.. note::
+ * Al momento il file javascript funziona solo se le colonne con widget ValueMap sono di tipo testo. Se le colonne sono di tipo numero intero lo script non funziona. E' in fase di revisione una PR al codice di Lizmap Web Client per far si che questo script funzioni anche con le colonne numeriche (https://github.com/3liz/lizmap-web-client/pull/1712).
+* Per maggiori dettagli vedere i commenti nel codice.
+
 .. _Gter srl: https://www.gter.it
