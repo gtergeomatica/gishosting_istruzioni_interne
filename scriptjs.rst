@@ -159,7 +159,7 @@ Questo file è stato creato appositamente per il progetto Concerteaux e consente
 
 * Modificare le etichette e/o i contenuti delle informazioni mostrate nel right-doc di Lizmap (tool **Informazioni**) e che vengono predisposte dalle proprietà del progetto QGIS (tab Qgis Server)
 
-.. image:: img/change metadata.png
+.. image:: img/change_metadata.png
 
 * Aggiungere un'immagine alle informazioni mostrate nel right-doc di Lizmap (tool **Informazioni**).
 
@@ -194,5 +194,36 @@ Rimuove la checkbox sul gruppo che permette di accendere/spegnere in contemporan
 .. hint::
  
  Attenzione, questo funziona solo per i gruppi il cui nome NON contiene spazi. E' quindi consigliato usare evitare spazi nei nomi dei gruppi in QGIS e eventualmente usare il plugin Lizmap per rinominarli.
+ 
+translation.js
+++++++++++++++++++++++
+
+Questo javascript traduce i nomi dei layer e dei grouppi, il titolo del progetto, i nomi dei layout di stampa e gli alias o inomi dei campi in funzione della lingua impostata per il browser. Utilizza dei file json da creare utilizzando lo script python *get_translatable_string.py*. Se viene fornita la stringa tradotta nel file json, la stringa originale viene tradotta altrimenti viene mostrata la stringa originale in lizmap.
+Il o i file json devono essere salvati nella cartella media del repository.
+
+Questo script legge la stringa originale (chiave) e quella tradotta (valore) dal json corrispondente che viene automaticamente caricato in funzione della lingua del browser. Per ogni key presente nel json, lo script verifica la presenza della stringa lato client utilizzando i selettori html (e.g. `$("div#header div#title h1")`). Se la stringa viene trovata e se è fornita una traduzione per quella stringa, allora viene tradotta.
+
+Al momento lo script traduce:
+* i nomi di layers e grouppi nell'albero dei layer
+* i nomi dei layer nel menù dei baselayer
+* i nomi dei layer nel menù del tool editing
+* i nomi dei layer nel menù del tool selezione
+* i nomi dei layout nel menù del tool stampa
+* i nomi di layers e grouppi nel menù del tool tabella attributi
+* il titolo del progetto
+* i nomi dei layer nel form del tool editing
+* alias e/o nomi dei campi nel form del tool editing
+* i nomi di layers nei popup
+* alias e/o nomi dei campi nei popup
+* il nome del layer mostrato nel tool localizzazione
+* il contenuto del pannello informazione dei layer
+
+.. note::
+ * Se qualcosa non viene tradotto correttamente verificare i selettori html (e.g. `$("div#header div#title h1")`), possono cambiare in funzione delle proprietà di lizmap (e.g il container del popup), oppure verificare il file json.
+ * Per maggiori dettagli vedere i commenti nel codice.
+ 
+Nel file javascript è necessario inserire le lingue per le quali si vuole ottenere la traduzione specificando il codice della lingua (es. fr o FR-fr). Per aggiungere nuove lingue basta copiare e incollare il blocco di codice (righe 18-21) cambiando il codice della lingua con quello desiderato.
+
+.. image:: img/translation.png
 
 .. _Gter srl: https://www.gter.it
