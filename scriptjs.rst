@@ -234,19 +234,19 @@ Per creare il o i file json per la traduzione bisogna utilizzare lo script pytho
 
 .. code-block:: JSON
 
-{
-    "Original layer name": "",
-    "Original group name": "",
-}
+ {
+     "Original layer name": "",
+     "Original group name": "",
+ }
 
 La traduzione deve essere inserita manualmente modificando il file inserendo la stringa fra doppi apici. Di seguito un esempio del json tradotto:
 
 .. code-block:: JSON
 
-{
-    "Original layer name": "Translated layer name", 
-    "Original group name": "Translated group name",
-}
+ {
+     "Original layer name": "Translated layer name", 
+     "Original group name": "Translated group name",
+ }
 
 .. note::
 * Lo script deve essere lanciato dalla python consol QGIS del progetto 
