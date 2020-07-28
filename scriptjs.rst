@@ -10,7 +10,9 @@ La documentazione di Lizmap sui file javascript aggiuntivi si trova qui https://
 Ad oggi i file javascript aggiuntivi che utilizziamo noi sono:
 
 * GoogleStreetView.js
-* add_3d_button.js (https://github.com/3liz/lizmap-web-client/issues/712 - https://github.com/3liz/lizmap-web-client/issues/374)
+* add_3d_button.js 
+ * https://github.com/3liz/lizmap-web-client/issues/712
+ * https://github.com/3liz/lizmap-web-client/issues/374
 * add_help_button.js
 * deactivate_tools.js - disattiva il tool Lizmap **locate** che è attivo di default
 * group_collaps.js
