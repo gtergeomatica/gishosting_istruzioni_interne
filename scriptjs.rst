@@ -226,4 +226,34 @@ Nel file javascript è necessario inserire le lingue per le quali si vuole otten
 
 .. image:: img/translation.png
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**COME CREARE IL O I JSON**
+
+Per creare il o i file json per la traduzione bisogna utilizzare lo script python *get_translatable_string.py*. Questo script recupera tutte le possibili stringhe da tradurre (layers name, groups name, layouts name, fields or aliases name, etc.) dal progetto QGIS e dal relativo file .cfg. Lo script salva un file json per ogni lingua specificata nella lista nominata **languages** (riga 21). La chiave del json è la stringa recuperata dal progetto o dal file .cfg, il valore dovrà invece contenere la traduzione della stringa. I file json sono automaticamente salvati nella cartella media della repository del progetto. Di seguito un esempio della struttura del json:
+
+.. code-block:: json
+{
+    "Original layer name": "",
+    "Original group name": "",
+}
+```
+La traduzione deve essere inserita manualmente modificando il file inserendo la stringa fra doppi apici. Di seguito un esempio del json tradotto:
+
+.. code-block:: json
+{
+    "Original layer name": "Translated layer name", 
+    "Original group name": "Translated group name",
+}
+```
+
+.. note::
+* Lo script deve essere lanciato dalla python consol QGIS del progetto 
+* Richiede il file .cfg creato con il lizmap plugin.
+* Per maggiori dettagli vedere i commenti nel codice.
+
+Nel file python è necessario inserire le lingue per le quali si vuole ottenere il json specificando il **codice breve** della lingua (es. fr, en, es, de, it, ecc.). Il codice va inserito nella lista nominata **languages** (riga 21). 
+
+.. image:: img/translation2.png
+
 .. _Gter srl: https://www.gter.it
