@@ -261,4 +261,15 @@ Nel file python è necessario inserire le lingue per le quali si vuole ottenere 
 welcome_popup.js
 ++++++++++++++++++++++++++++++++++
 
+Mostra un popup all'avvio della pagina. Il contenuto del popup deve essere scritto in formato HTML possono quindi essere aggiunti testi, imaggini, link, ecc. sfruttando i vari tag html e relativi attributi, stile ecc. Le eventuali immagini devono essere salvate nella cartella media della repository e il percorso all'immagine deve essere passato nel file javascript tramite le righe di codice mostrate sotto:
+
+.. image:: img/popup.png
+
+Il contenuto del popup deve poi essere "costruito" inserendo il codice html nella variabile **html**.
+
+.. image:: img/popup.png
+
+.. note::
+ Per Concerteaux è stata creata una versione particolare di questo script che mostra il popup in italiano o in francese a seconda della lingua selezionata per il browser. Una versione invece mono lingua e quindi più semplice si trova nei progettoi di ASTER.
+
 .. _Gter srl: https://www.gter.it
