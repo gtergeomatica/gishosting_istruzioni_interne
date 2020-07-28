@@ -10,9 +10,7 @@ La documentazione di Lizmap sui file javascript aggiuntivi si trova qui https://
 Ad oggi i file javascript aggiuntivi che utilizziamo noi sono:
 
 * GoogleStreetView.js
-* add_3d_button.js 
- * https://github.com/3liz/lizmap-web-client/issues/712
- * https://github.com/3liz/lizmap-web-client/issues/374
+* add_3d_button.js (https://github.com/3liz/lizmap-web-client/issues/712 - https://github.com/3liz/lizmap-web-client/issues/374)
 * add_help_button.js
 * deactivate_tools.js - disattiva il tool Lizmap **locate** che è attivo di default
 * group_collaps.js
@@ -153,12 +151,30 @@ Di default Lizmap mostra i gruppi di layer nell'albero dei layer *"espansi"*. No
 metadata_home_button.js
 +++++++++++++++++++++++++
 
-TO DO
+Questo file è stato creato appositamente per il progetto Concerteaux e consente di:
 
+* Rimuovere il bottone **home** dalla toolbar
+
+.. image:: img/remove_home.png
+
+* Modificare le etichette e/o i contenuti delle informazioni mostrate nel right-doc di Lizmap (tool **Informazioni**) e che vengono predisposte dalle proprietà del progetto QGIS (tab Qgis Server)
+
+.. image:: img/change metadata.png
+
+* Aggiungere un'immagine alle informazioni mostrate nel right-doc di Lizmap (tool **Informazioni**).
+
+.. image:: img/add_image_metadata.png
+
+.. note::
+ 
+ Queste tre funzioni sono state accorpate in un unico file nel caso di Concerteax ma è ovviamente possibile creare tre file js distinti oppure commentare le funzioni che non interessano.
+ 
 mouse_position.js
-+++++++++++++++++++++++++
+++++++++++++++++++++++++++
 
-TO DO
+Permette di visualizzare le coordinate al puntatore del mouse in gradi (WGS84) di default invece che in metri (SR Pseudo Mercatore 3857). 
+
+.. warning:: non abbiamo ancora trovato il modo di settare un SR specifico con cui visualizzare le coordinato del mouse
 
 refresh_layers.js
 +++++++++++++++++++++++++
@@ -166,6 +182,7 @@ refresh_layers.js
 "Refresha" ogni n millesecondi (definiti nel file js) i layer indicati nel file js. E' sufficiente inserire il nome del layer QGIS (stringa) nella lista nominata **rlayers** (riga 6) e i millesecondi nella variabile **refreshInterval** (riga 14). Il resto del codice va lasciato invariato.
 
 .. image:: img/refresh_layers.png
+
 
 remove_group_check.js
 +++++++++++++++++++
