@@ -290,12 +290,15 @@ Per utilizzare questo script è quindi necessario inserire i nomi dei layer (que
 
 **COME CREARE LA TABELLA**
 
-Per creare in automatico la tabella bisogna utilizzare lo script python **get_cod_label_widget.py**. Questo script recupera tutti i codici e relative descrizione di tutti i widget ValueMap impostati per le varie colonne dei vari layer caricati nel progetto Qgis, e compila una tabella (non spatial in formato .dbf) che deve essere caricata nel progetto Qgis prima di lanciare lo script. Th table layer must be a .dbf file with three text columns named: fieldname, cod and label. This file must be created by the user and added to the QGIS project.
-This python script also creates a txt file with the list on layers names with ValueMap widgets. This list can be used to add the layers name to the valueMap_in_attributeTable.js file.
-The resulting table layer must be added to lizmap web client.
+Per creare in automatico la tabella bisogna utilizzare lo script python **get_cod_label_widget.py**. Questo script recupera tutti i codici e relative descrizione di tutti i widget ValueMap impostati per le varie colonne dei vari layer caricati nel progetto Qgis, e compila una tabella (non spatial in formato .dbf) che deve essere caricata nel progetto Qgis prima di lanciare lo script. La tabella, che deve essere creata dall'utente, deve contenere tre colonne (tipo testo) nominate: fieldname, cod and label. Lo script python crea anche un file .txt con l'elenco dei nomi dei layer con dei ValueMap widget. Questo elenco può essere utilizzato (copia/incolla) per aggiungere i nomi dei layer alla lista nominata **layers_to_translate** nel file valueMap_in_attributeTable.js (riga 6).
+La tabella risultante deve essere aggiunta come layer di lizmap web client.
 
-**NB.**
-* The script has to be run from the QGIS python console of the project.
-* For further details about the script see the comments in the code.
+.. note::
+ * Lo script deve essere lanciato dalla python consol QGIS del progetto 
+ * Per maggiori dettagli vedere i commenti nel codice.
+ 
+Nel file python è necessario inserire il nome della tabella che verrà poi compilata. Il nome va inserito nella variabile nominata **table** (riga 18). 
+
+.. image:: img/table_name.png
 
 .. _Gter srl: https://www.gter.it
