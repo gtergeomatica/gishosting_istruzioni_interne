@@ -284,6 +284,18 @@ Per utilizzare questo script è quindi necessario inserire i nomi dei layer (que
 
 .. note::
  * Al momento il file javascript funziona solo se le colonne con widget ValueMap sono di tipo testo. Se le colonne sono di tipo numero intero lo script non funziona. E' in fase di revisione una PR al codice di Lizmap Web Client per far si che questo script funzioni anche con le colonne numeriche (https://github.com/3liz/lizmap-web-client/pull/1712).
-* Per maggiori dettagli vedere i commenti nel codice.
+ * Per maggiori dettagli vedere i commenti nel codice.
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**COME CREARE LA TABELLA**
+
+Per creare in automatico la tabella bisogna utilizzare lo script python **get_cod_label_widget.py**. Questo script recupera tutti i codici e relative descrizione di tutti i widget ValueMap impostati per le varie colonne dei vari layer caricati nel progetto Qgis, e compila una tabella (non spatial in formato .dbf) che deve essere caricata nel progetto Qgis prima di lanciare lo script. Th table layer must be a .dbf file with three text columns named: fieldname, cod and label. This file must be created by the user and added to the QGIS project.
+This python script also creates a txt file with the list on layers names with ValueMap widgets. This list can be used to add the layers name to the valueMap_in_attributeTable.js file.
+The resulting table layer must be added to lizmap web client.
+
+**NB.**
+* The script has to be run from the QGIS python console of the project.
+* For further details about the script see the comments in the code.
 
 .. _Gter srl: https://www.gter.it
