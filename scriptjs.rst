@@ -282,8 +282,10 @@ Per utilizzare questo script è quindi necessario inserire i nomi dei layer (que
 
 .. image:: img/table_VM.png
 
-.. note::
+.. warning::
  * Al momento il file javascript funziona solo se le colonne con widget ValueMap sono di tipo testo. Se le colonne sono di tipo numero intero lo script non funziona. E' in fase di revisione una PR al codice di Lizmap Web Client per far si che questo script funzioni anche con le colonne numeriche (https://github.com/3liz/lizmap-web-client/pull/1712).
+ 
+.. note::
  * Per maggiori dettagli vedere i commenti nel codice.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
