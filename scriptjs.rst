@@ -204,6 +204,7 @@ Il o i file json devono essere salvati nella cartella media del repository.
 Questo script legge la stringa originale (chiave) e quella tradotta (valore) dal json corrispondente che viene automaticamente caricato in funzione della lingua del browser. Per ogni key presente nel json, lo script verifica la presenza della stringa lato client utilizzando i selettori html (e.g. `$("div#header div#title h1")`). Se la stringa viene trovata e se è fornita una traduzione per quella stringa, allora viene tradotta.
 
 Al momento lo script traduce:
+
 * i nomi di layers e grouppi nell'albero dei layer
 * i nomi dei layer nel menù dei baselayer
 * i nomi dei layer nel menù del tool editing
@@ -249,12 +250,15 @@ La traduzione deve essere inserita manualmente modificando il file inserendo la 
  }
 
 .. note::
-* Lo script deve essere lanciato dalla python consol QGIS del progetto 
-* Richiede il file .cfg creato con il lizmap plugin.
-* Per maggiori dettagli vedere i commenti nel codice.
+ * Lo script deve essere lanciato dalla python consol QGIS del progetto 
+ * Richiede il file .cfg creato con il lizmap plugin.
+ * Per maggiori dettagli vedere i commenti nel codice.
 
 Nel file python è necessario inserire le lingue per le quali si vuole ottenere il json specificando il **codice breve** della lingua (es. fr, en, es, de, it, ecc.). Il codice va inserito nella lista nominata **languages** (riga 21). 
 
 .. image:: img/translation2.png
+
+welcome_popup.js
+++++++++++++++++++++++++++++++++++
 
 .. _Gter srl: https://www.gter.it
