@@ -263,7 +263,7 @@ welcome_popup.js
 
 Mostra un popup all'avvio della pagina. Il contenuto del popup deve essere scritto in formato HTML possono quindi essere aggiunti testi, imaggini, link, ecc. sfruttando i vari tag html e relativi attributi, stile ecc. Le eventuali immagini devono essere salvate nella cartella media della repository e il percorso all'immagine deve essere passato nel file javascript tramite le righe di codice mostrate sotto:
 
-.. image:: img/popup.png
+.. image:: img/html.png
 
 Il contenuto del popup deve poi essere "costruito" inserendo il codice html nella variabile **html**.
 
