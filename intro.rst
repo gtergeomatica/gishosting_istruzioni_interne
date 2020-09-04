@@ -19,9 +19,28 @@ DA COMPLETARE ROBERTO
 
 1. Nuovo utente 
 ===============================
+Per la creazione di un nuovo utente abbiamo automatizzato quasi tutto utilizzando il form per la creazione dell'utente nel mese di prova 
+https://gishosting.gter.it/home/form.php *Si consiglia pertanto di usare il suddetto form anche quando l'utente si voglia creare in autonomia*.
+
+Gli unici passi che non sono ancora automatizzati sono:
+1) *popolamento dei dati demo su nextcloud* : occorre controllare la password sul DB utenti (DB qgis_gter, schema gishosting_admin) ed entrare su nextcloud, i dati demo vengono creati in automatico 
+
+.. image:: img/new_user1.PNG
 
 
-DA COMPLETARE ROBERTO
+2) *assegnare i permessi al repository lizmap* : cercare il repository (sarà l'ultimo creato) cliccare su modifica e assegnare i permessi:
+
+.. image:: img/new_user2.PNG
+
+Salvo casi particolari i permessi vanno settati così:
+
+- vedere repository: anonimo, admin, gruppo utente creato
+- vedere link WMS: anonimo, admin, gruppo utente creato
+- altri: admin, gruppo utente creato
+
+
+
+
 
 
 2. Aggiunta opzione geoDB
@@ -147,18 +166,18 @@ c) pulizia dati del DB
 -------------------------------------------------
 In questo caso occorre entrare su lizmap (https://gishosting.gter.it/lizmap-web-client/lizmap/www/) con utente amministratore e fare tutto da interfaccia amministratore di lizmap:
 
-.. image:: img/rimozione_1.png
+.. image:: img/rimozione_1.PNG
 
 1) rimuovere utente
 
 Cliccare su "utenti" ercare l'utente, cliccare su "Vista" e su "Cancella". E' necessario confermare con la password di root
-.. image:: img/rimozione_utente.png
+.. image:: img/rimozione_utente.PNG
 
 
 2) rimuovere uno o più gruppi
 Cliccare su "Gestione permessi dei gruppi", andare in fondo alla pagina e selezionare il gruppo che si intende cancellare, quindi cliccare sul tasto  "cancella"
 
-.. image:: img/rimozione_gruppo.png
+.. image:: img/rimozione_gruppo.PNG
 
 
 
@@ -167,7 +186,7 @@ Cliccare su "Gestione permessi dei gruppi", andare in fondo alla pagina e selezi
 
 Cliccare su "Configurazione Lizmap" cercare il repository da eliminare ed eliminarlo con il tasto "Rimuovi"
 
-.. image:: img/rimozione_repo.png
+.. image:: img/rimozione_repo.PNG
 
 
 
@@ -176,7 +195,7 @@ Cliccare su "Configurazione Lizmap" cercare il repository da eliminare ed elimin
 
 Accedere a nextcloud con l'utente amministratore (che non è l'utente admin!!) e accedere alla gestione utenti
 
-.. image:: img/rimozione_next1.png
+.. image:: img/rimozione_next1.PNG
 
 A questo punto è possibile "disabilitare" gli utenti o rimuoverli definitivamente oltre che forzare la cancellazione dei dati dalla cartella utente qualora necessario
 
