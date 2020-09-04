@@ -44,11 +44,11 @@ Salvo casi particolari i permessi vanno settati così:
 
 .. code-block:: bash
 
-	Gent.mo Piero Capello,
+	Gent.mo *Nome Cognome*,
 
 
 	Grazie per la fiducia accordataci.
-	Come richiesto è stato creato un utente piero_capello con password da te richiesta nella fase di registrazione.
+	Come richiesto è stato creato un utente XXXXXX con password da te richiesta nella fase di registrazione.
 	L’utente è da considerarsi valido per soli fini di prova, è soggetto a limiti di spazio (50 Mb di tuoi dati) e traffico internet con limitazione dell’ampiezza di banda. Tuttavia i dati e il lavoro svolto verranno mantenuti nel caso in cui si acquisti uno dei pacchetti di GisHosting.
 
 	La tua pagina è raggiungibile all'indirizzo [1] e i tuoi dati sono gestibili tramite il client nextcloud collegandosi all’indirizzo [2] con le tue credenziali.
@@ -72,9 +72,9 @@ Salvo casi particolari i permessi vanno settati così:
 
 
 
-	Dear Piero Capello,
+	Dear *Nome Cognome*,
 
-	Thank you for registering to GisHosting web site. We have created the user piero_capello.
+	Thank you for registering to GisHosting web site. We have created the user XXXXXX.
 	The user is valid for trial purposes, has space limits (50 Mb of your data) and Internet traffic bandwidth limitation. However your data and work will be maintained if you purchase one of the GisHosting packages.
 
 	Your page can be reached at [1] and your data can be managed through the nextcloud application using the address [2] and your credentials.
