@@ -39,6 +39,75 @@ Salvo casi particolari i permessi vanno settati così:
 - altri: admin, gruppo utente creato
 
 
+3) mandare mail con il seguente testo di esempio dall'indirizzo assistenzagis@gter.it (con in cc assistenzagis@gter)
+
+
+.. code-block:: bash
+
+	Gent.mo Piero Capello,
+
+
+	Grazie per la fiducia accordataci.
+	Come richiesto è stato creato un utente piero_capello con password da te richiesta nella fase di registrazione.
+	L’utente è da considerarsi valido per soli fini di prova, è soggetto a limiti di spazio (50 Mb di tuoi dati) e traffico internet con limitazione dell’ampiezza di banda. Tuttavia i dati e il lavoro svolto verranno mantenuti nel caso in cui si acquisti uno dei pacchetti di GisHosting.
+
+	La tua pagina è raggiungibile all'indirizzo [1] e i tuoi dati sono gestibili tramite il client nextcloud collegandosi all’indirizzo [2] con le tue credenziali.
+
+	Alleghiamo alla presente mail alcuni tutorial su:
+
+	- come impostare la cartella di rete nextcloud su Sistemi Operativi Windows, Mac e Linux
+
+	https://docs.zoho.eu/file/gk4ai9b3524ce704a4e48bc6ec493c37a038e
+
+	- come gestire i primi progetti QGIS per la pubblicazione su web
+
+	https://docs.zoho.eu/file/3xkcgcba0999d6048426ab905a71b58310078
+
+	Per maggiori informazioni ti invitiamo a contattarci telefonicamente o per mail.
+
+	Grazie e cordiali saluti,
+
+	Il team di Gter
+
+
+
+
+	Dear Piero Capello,
+
+	Thank you for registering to GisHosting web site. We have created the user piero_capello.
+	The user is valid for trial purposes, has space limits (50 Mb of your data) and Internet traffic bandwidth limitation. However your data and work will be maintained if you purchase one of the GisHosting packages.
+
+	Your page can be reached at [1] and your data can be managed through the nextcloud application using the address [2] and your credentials.
+
+	The instruction to use the nextcloud desktop client are available here [3] and attached you can find two tutorials (in Italian) which explain the first steps to use GisHosting.
+
+	For more information, please contact us by phone or mail.
+
+	Thanks and best regards,
+
+	The Gter team
+
+
+	[1] - http://www.gishosting.gter.it/piero_capello/
+	[2] - https://www.gishosting.gter.it/nextcloud/
+	[3] - https://docs.nextcloud.com/desktop/2.3/
+
+
+	Servizio assistenza GisHosting
+	Gter srl Innovazione in Geomatica, Gnss e Gis (Unige spin-off)
+	Via Ruffini 9R - 16128 Genova
+	P.IVA/CF 01998770992
+	ph: 010-0899150
+	E-mail: gishosting@gter.it
+	www.gter.it
+
+	--
+	Gter social
+	www.twitter.com/Gteronline - www.facebook.com/Gteronline - https://plus.google.com/+GterIt/posts 
+	www.linkedin.com/company/gter-srl-innovazione-in-geomatica-gnss-e-gis
+
+	-----------------------------------------------------------------
+	Please consider the environment before printing this email! 
 
 
 
