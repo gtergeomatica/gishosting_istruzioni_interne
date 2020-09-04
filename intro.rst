@@ -273,14 +273,15 @@ A questo punto è possibile "disabilitare" gli utenti o rimuoverli definitivamen
 -------------------------------------------------- 
 Per fare questo abbiamo uno script python appositamente scritto e presente sul nostro NAS
 
-prodotti\GISHOSTING_GTER_IT\Admin\delete_user.py
+prodotti\\GISHOSTING_GTER_IT\\Admin\\delete_user.py
 
 il comando si lancia come  
 
 .. code-block:: bash
+	
 	python3 delete_user.py nome_utente_da_rimuovere
 
-quindi 
+ 
 
 6. Progetti particolari
 ===============================
