@@ -17,21 +17,21 @@ DA COMPLETARE ROBERTO
 
 
 
-Nuovo utente 
+1. Nuovo utente 
 ===============================
 
 
 DA COMPLETARE ROBERTO
 
 
-Aggiunta opzione geoDB
+2. Aggiunta opzione geoDB
 ===============================
 
 
 DA COMPLETARE ROBERTO
 
 
-Creazione di un repository o modifica del nome all'interno della cartella utente 
+3. Creazione di un repository o modifica del nome all'interno della cartella utente 
 ===================================================================================
 
 Sono sostanzialmente necessari 3 step:
@@ -48,7 +48,7 @@ Sono sostanzialmente necessari 3 step:
 
 
 
-Creazione cartella media su storage box
+4. Creazione cartella media su storage box
 ============================================
 1. Con connessione ssh (es.mobaxterm)
 
@@ -132,12 +132,72 @@ ad esempio se l'utente **u221008-sub3** fosse quello corrispondente alla cartell
 NB Qualora venga cambiato il nome di un repository è necessario rifare i passi 1-4 da capo (con nuovo utente e nuova pwd) e sostituire utente, password e nomerepository nel file /etc/fstab
 
 
-
-
-Progetti particolari
+5. Rimozione utente
 ===============================
 
-Form creazione utenti ASTER 
+A valle dei mesi di prova, ma non solo, spesso è necessario rimuovere un utente. 
+
+I passi da fare sono essenzialmente 3: 
+
+a) rimozione dati utente da lizmap
+b) rimozione dati da nextcloud
+c) pulizia dati del DB
+
+5.1 rimozione dati utente da lizmap
+-------------------------------------------------
+In questo caso occorre entrare su lizmap (https://gishosting.gter.it/lizmap-web-client/lizmap/www/) con utente amministratore e fare tutto da interfaccia amministratore di lizmap:
+
+.. image:: img/rimozione_1.png
+
+1) rimuovere utente
+
+Cliccare su "utenti" ercare l'utente, cliccare su "Vista" e su "Cancella". E' necessario confermare con la password di root
+.. image:: img/rimozione_utente.png
+
+
+2) rimuovere uno o più gruppi
+Cliccare su "Gestione permessi dei gruppi", andare in fondo alla pagina e selezionare il gruppo che si intende cancellare, quindi cliccare sul tasto  "cancella"
+
+.. image:: img/rimozione_gruppo.png
+
+
+
+
+3) rimuovere il repository ( o i repository se necessario)
+
+Cliccare su "Configurazione Lizmap" cercare il repository da eliminare ed eliminarlo con il tasto "Rimuovi"
+
+.. image:: img/rimozione_repo.png
+
+
+
+5.2 rimozione dati da nextcloud
+-------------------------------------------------- 
+
+Accedere a nextcloud con l'utente amministratore (che non è l'utente admin!!) e accedere alla gestione utenti
+
+.. image:: img/rimozione_next1.png
+
+A questo punto è possibile "disabilitare" gli utenti o rimuoverli definitivamente oltre che forzare la cancellazione dei dati dalla cartella utente qualora necessario
+
+
+5.3 Pulizia dati del DB
+-------------------------------------------------- 
+Per fare questo abbiamo uno script python appositamente scritto e presente sul nostro NAS
+
+prodotti\GISHOSTING_GTER_IT\Admin\delete_user.py
+
+il comando si lancia come  
+
+.. code-block:: bash
+	python3 delete_user.py nome_utente_da_rimuovere
+
+quindi 
+
+6. Progetti particolari
+===============================
+
+6.1 Form creazione utenti ASTER 
 -----------------------------------
 
 DA COMPLETARE ROBERTA
