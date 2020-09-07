@@ -289,7 +289,7 @@ il comando si lancia come
 6.1 Form creazione utenti ASTER 
 -----------------------------------
 
-DA COMPLETARE ROBERTA
+Per GisHosting di ASTER è stato creato un form per consentire a utenti esterni di registrarsi come utenti di ASTER e poter quindi accedere al loro GisHosting visualizzando solo i progetti consentiti lato admin. Questi utenti esterni infatti, una volta registrati tramite la compilazione del form, vengono automaticamente inseriti in un gruppo-utenti deicato (**astergenova5_group**).
 
 
 
