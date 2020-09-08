@@ -34,6 +34,7 @@ Gli unici passi che non sono ancora automatizzati sono:
 	cd ~/gishosting_gestione_utenti
 
 con *nano* o altra modalità di editing specificare il nome utente nel file *crea_utente.sh
+
 .. code-block:: bash
 
 	nano crea_utente.sh
