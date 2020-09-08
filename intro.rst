@@ -27,8 +27,23 @@ Gli unici passi che non sono ancora automatizzati sono:
 
 .. image:: img/new_user1.PNG
 
+2) creare il link web al repository (es. http://www.gishosting.gter.it/comunelegnago)
 
-2) *assegnare i permessi al repository lizmap* : cercare il repository (sarà l'ultimo creato) cliccare su modifica e assegnare i permessi:
+.. code-block:: bash
+
+	cd ~/gishosting_gestione_utenti
+
+con *nano* o altra modalità di editing specificare il nome utente nel file *crea_utente.sh
+.. code-block:: bash
+
+	nano crea_utente.sh
+
+.. code-block:: bash
+
+	sh crea_utente.sh
+
+
+3) *assegnare i permessi al repository lizmap* : cercare il repository (sarà l'ultimo creato) cliccare su modifica e assegnare i permessi:
 
 .. image:: img/new_user2.PNG
 
@@ -39,7 +54,7 @@ Salvo casi particolari i permessi vanno settati così:
 - altri: admin, gruppo utente creato
 
 
-3) mandare mail con il seguente testo di esempio dall'indirizzo assistenzagis@gter.it (con in cc assistenzagis@gter)
+4) mandare mail con il seguente testo di esempio dall'indirizzo assistenzagis@gter.it (con in cc assistenzagis@gter)
 
 
 .. code-block:: bash
