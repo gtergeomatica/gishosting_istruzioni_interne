@@ -291,9 +291,19 @@ il comando si lancia come
 
 Per GisHosting di ASTER è stato creato un form per consentire a utenti esterni di registrarsi come utenti di ASTER e poter quindi accedere al loro GisHosting visualizzando solo i progetti consentiti lato admin. Questi utenti esterni infatti, una volta registrati tramite la compilazione del form, vengono automaticamente inseriti in un gruppo-utenti deicato (**astergenova5_group**) che ha il permesso di visualizzare solo i progetti definiti dall'amministratore tramite il plugin Lizmap.
 
-Il form è raggiungibile al seguente link: https://www.gishosting.gter.it/home/form_external_aster.php
+Il form è raggiungibile via web al seguente link: https://www.gishosting.gter.it/home/form_external_aster.php
 
+Il file **form_external_aster.php** è sul server gishosting in /home/gter/qgis_server/
 
+L'utente esterno inserisce i propri dati dalla pagina web, premendo il tasto *SUBMIT* si avvia la connessione al DataBase lizmap dove viene inserito il nuovo utente. I parametri di connessione al DB sono specificati nel file **root_connection.php** (sul server gishosting in /home/gter/qgis_server/) che viene richiamato nel file del form tramite un include php. Per prima cosa si verifica che l'username definito dall'utente non sia già esistente, se il controllo ritorna falso allora viene aggiunto l'utente alla tabella **jlx_user** e l'utente associato al gruppo nella tabella **jacl2_user_group** del DB lizmap.
+
+Vengono quindi inviate in automatico tre mail:
+
+1. Da GisHosting all'admin di ASTER con i dettagli dell'utente appena creato
+2. Da GisHosting a assistenzagis, mail di servizio con i dettagli dell'utente appena creato
+3. Da GisHosting all'utente che si è appena registrato. In questa mail è stato messo in copia l'admin di ASTER ed è stato impostato il *Reply to* a un indirizzo di ASTER. In caso di problemi quindi l'utente non risponde a noi ma ad ASTER.
+
+Nel caso si volesse replicare per altri clienti, fare attenzione a modificare correttamente le variabili *$user_admin, $gruppo, $cliente e $loro_recapito* oltre ai testi delle mail, gli oggetti, ecc.
 
 
 Note finali
