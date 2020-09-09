@@ -27,7 +27,7 @@ Gli unici passi che non sono ancora automatizzati sono:
 
 .. image:: img/new_user1.PNG
 
-2) creare il link web al repository (es. http://www.gishosting.gter.it/comunelegnago)
+2) creare il link web al repository (es. http://www.gishosting.gter.it/comunelegnago) collegandosi al server via ssh (e.g con mobaxterm)
 
 .. code-block:: bash
 
