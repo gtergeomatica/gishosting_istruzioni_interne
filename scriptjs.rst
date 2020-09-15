@@ -21,6 +21,7 @@ Ad oggi i file javascript aggiuntivi che utilizziamo noi sono:
 * translation.js
 * welcome_popup.js
 * valuemap_table.js (https://github.com/3liz/lizmap-web-client/pull/1712 - https://github.com/3liz/lizmap-javascript-scripts/pull/25)
+* appendImageToALayerLegend.js
 * grouptimetool.js (https://github.com/Brun04/group-timetool - https://github.com/3liz/lizmap-javascript-scripts/pull/26)
 
 **WORK IN PROGRESS**
@@ -302,5 +303,16 @@ La tabella risultante deve essere aggiunta come layer di lizmap web client.
 Nel file python è necessario inserire il nome della tabella che verrà poi compilata. Il nome va inserito nella variabile nominata **table** (riga 18). 
 
 .. image:: img/table_name.png
+
+appendImageToALayerLegend.js
+++++++++++++++++++++++++++++++++
+
+Questo javascript non si trova nella repository di Lizmap dedicata ai file javascript ma in *lizmap-web-client/lizmap/install/qgis/media/js/*. Il file permette di utilizzare un'immagine statica (es. .png) come legenda per uno specifico layer. Il file originale è stato modificato affinche l'immagine possa essere utilizzata come legenda per più layers.
+
+L'immagine della legenda deve essere nella cartella **media** del repository e deve essere indicato il percorso relativo al file nella variabile **imageUrl** (riga 18 del codice js).
+
+I nomi dei layer (in QGIS) per i quali si vuole utilizzare l'immagine devono essere specificati, come stringhe, nell'array nominato **layernames** (riga 18 del codice js).
+
+.. image:: img/img_legend.png
 
 .. _Gter srl: https://www.gter.it
