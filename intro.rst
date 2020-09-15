@@ -321,9 +321,37 @@ Vengono quindi inviate in automatico tre mail:
 
 Nel caso si volesse replicare per altri clienti, fare attenzione a modificare correttamente le variabili *$user_admin, $gruppo, $cliente e $loro_recapito* oltre ai testi delle mail, gli oggetti, ecc.
 
+6.2 Griglia di Log utenti ASTER 
+-----------------------------------
+
+Per GisHosting di ASTER è stata aggoiunta alla dashboard, accessibile loggandosi come amministratore, una tabella con il Log di Lizmap da quale è possibile vedere le principali attività svolte dagli utenti (es. stampa, visualizzazione della mappa, ecc.), su quali progetti hanno svolto tali attività e in quale data. I dati da inserire nella griglia vengono direttamente recuperati dal DB lizmap (parametri di connessione nel file **/home/gter/qgis_server/root_connection.php**) tramite due query contenute nel file **/home/gter/qgis_server/griglia_log.php**. La prima query seleziona dalla tabella *jacl2_user_group* tutti gli utenti dell'amministratore ASTER. La seconda query invece seleziona per tutti gli utenti, risultanti dalla prima query, le informazioni del Log contenute nella tabella *log_detail*.
+
+Il codice HTML della tabella contente le informazioni di Log estratte tramite le query, si trova nel file **/home/gter/qgis_server/dati_utente.php**. Al tag <table> viene attribuito un attributo *data-url* il cui valore è la url al file *griglia_log.php* da cui vengono appunto recuperate le informazioni da visualizzare nelle diverse colonne della tabella. Le singole colonne sono gestite dal tag <th> che deve avere un attributo *data-field* il cui valore deve essere il nome della colonna selezionata dal DB tramite la seconda query.
+
+.. code-block:: php
+
+	$query_log = "select log_key, log_user, log_timestamp, log_content, log_repository, log_project from log_detail WHERE log_user = '" .$r[login]. "'";
+	
+.. code-block:: HTML
+
+	<thead>
+	 <tr>
+            <th data-field="state" data-checkbox="true"></th>
+	    <th data-field="log_key" data-sortable="true" data-filter-control="select" data-visible="true">Attività</th>
+            <th data-field="log_user" data-sortable="true" data-filter-control="select" data-visible="true">Utenti</th>
+            <th data-field="log_timestamp" data-sortable="true" data-filter-control="select" data-visible="true">Data/ora</th>
+            <th data-field="log_content" data-sortable="true" data-filter-control="input" data-visible="true">Contenuto</th>
+            <th data-field="log_repository" data-sortable="true" data-filter-control="select" data-visible="true">Repository</th>
+            <th data-field="log_project" data-sortable="true" data-filter-control="select" data-visible="true">Progetti</th>
+         </tr>
+	</thead>
+
+	
+
+
 
 Note finali
-**************************************************************
+-----------------------------------
 
 
 * guida di lizmap: https://docs.lizmap.com/current/it/
