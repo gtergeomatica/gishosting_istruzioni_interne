@@ -311,7 +311,7 @@ Questo javascript non si trova nella repository di Lizmap dedicata ai file javas
 
 L'immagine della legenda deve essere nella cartella **media** del repository e deve essere indicato il percorso relativo al file nella variabile **imageUrl** (riga 18 del codice js).
 
-I nomi dei layer (in QGIS) per i quali si vuole utilizzare l'immagine devono essere specificati, come stringhe, nell'array nominato **layernames** (riga 18 del codice js).
+I nomi dei layer (in QGIS) per i quali si vuole utilizzare l'immagine devono essere specificati, come stringhe, nell'array nominato **layernames** (riga 7 del codice js).
 
 .. image:: img/img_legend.png
 
