@@ -170,6 +170,8 @@ Sono sostanzialmente necessari 3 step:
 
 
 
+MANCA LA SPIEGAZIONE di come creare un gruppo associato (TODO roberto)
+
 
 
 4. Creazione cartella media su storage box
