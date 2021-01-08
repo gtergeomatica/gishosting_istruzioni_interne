@@ -150,7 +150,7 @@ Salvo casi particolari i permessi vanno settati così:
 	cd gishosting_gestione_utente
 	sh update_geodb.sh
 
-5. accedendo a gishosting e nextcloud verificare che sia tutto ok
+5. accedendo a lizmap e nextcloud verificare che sia tutto ok
 
 
 
