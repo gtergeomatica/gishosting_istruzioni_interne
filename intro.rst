@@ -147,6 +147,7 @@ Salvo casi particolari i permessi vanno settati così:
 4. Salvare il file e da terminale 
 
 .. code-block:: bash
+
 	cd gishosting_gestione_utente
 	sh update_geodb.sh
 
