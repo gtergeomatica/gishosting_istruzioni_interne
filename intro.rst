@@ -20,7 +20,14 @@ DA COMPLETARE ROBERTO
 1. Nuovo utente 
 ===============================
 Per la creazione di un nuovo utente abbiamo automatizzato quasi tutto utilizzando il form per la creazione dell'utente nel mese di prova 
-https://gishosting.gter.it/home/form.php *Si consiglia pertanto di usare il suddetto form anche quando l'utente si voglia creare in autonomia*.
+https://gishosting.gter.it/home/form.php 
+
+*Si consiglia pertanto di usare il suddetto form anche quando l'utente si voglia creare in autonomia*. 
+Nel caso in cui l'utente si faccia in autonomia il punto 1 e 4 possono essere tralasciati in quanto la password la si 
+conosce e la mail non è necessaria. Inoltre nel caso in cui si crei in autonomia **non inserire la mail del 
+cliente per evitare riceva delle mail poco comprensibili**; la mail corretta verrà settata a mano acceendo a nextcloud e lizmap
+
+
 
 Gli unici passi che non sono ancora automatizzati sono:
 1) *popolamento dei dati demo su nextcloud* : occorre controllare la password sul DB utenti (DB qgis_gter, schema gishosting_admin) ed entrare su nextcloud, i dati demo vengono creati in automatico 
@@ -131,8 +138,16 @@ Salvo casi particolari i permessi vanno settati così:
 2. Aggiunta opzione geoDB
 ===============================
 
+1. Accedere a gishosting tramite mobaxterm.
+2. Accedere alla cartella gishosting_gestione_utente nella home.
+3. Aprire il file update_geodb.sh e modificare nome utente e password (per la passwod si veda precedente punto 1.1)
+4. Salvare il file e da terminale 
+.. code-block:: bash
+	cd gishosting_gestione_utente
+	sh update_geodb.sh
 
-DA COMPLETARE ROBERTO
+5. accedendo a gishosting e nextcloud verificare che sia tutto ok
+
 
 
 3. Creazione di un repository o modifica del nome all'interno della cartella utente 
