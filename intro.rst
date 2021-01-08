@@ -33,7 +33,6 @@ Gli unici passi che non sono ancora automatizzati sono:
 
 1) verificare la password dell'utente sul DB utenti (DB qgis_gter, schema gishosting_admin) 
 
-
 2) *popolamento dei dati demo su nextcloud* : occorre entrare su nextcloud (https://www.gishosting.gter.it/nextcloud) con utente e password recuperati,
 i dati demo vengono creati in automatico 
 
@@ -45,18 +44,17 @@ i dati demo vengono creati in automatico
 
 	cd ~/gishosting_gestione_utenti
 
-con *nano* o altra modalità di editing specificare il nome utente nel file *crea_utente.sh*
-
-.. code-block:: bash
-
-	nano crea_utente.sh
+con un editor di testo specificare il nome utente nel file *crea_utente.sh* e infine lanciarlo come script bash
 
 .. code-block:: bash
 
 	sh crea_utente.sh
 
 
-4) *assegnare i permessi al repository lizmap* : cercare il repository (sarà l'ultimo creato) cliccare su modifica e assegnare i permessi:
+4) *assegnare i permessi al repository lizmap* : 
+
+- accedere a lizmap www.gishosting.gter.it/lizmap-web-client/lizmap/www/admin.php con utente amministratore (utente e password su nostro NAS in coordinamento/prodotti/GISHOSTIONG_GTER_IT/Admin) 
+- cercare il repository (sarà l'ultimo creato, quindi in fondo alla lista) cliccare su modifica e assegnare i permessi:
 
 .. image:: img/new_user2.PNG
 
@@ -147,6 +145,7 @@ Salvo casi particolari i permessi vanno settati così:
 2. Accedere alla cartella gishosting_gestione_utente nella home.
 3. Aprire il file update_geodb.sh e modificare nome utente e password (per la passwod si veda precedente punto 1.1)
 4. Salvare il file e da terminale 
+
 .. code-block:: bash
 	cd gishosting_gestione_utente
 	sh update_geodb.sh
