@@ -45,7 +45,7 @@ i dati demo vengono creati in automatico
 
 	cd ~/gishosting_gestione_utenti
 
-con *nano* o altra modalità di editing specificare il nome utente nel file *crea_utente.sh
+con *nano* o altra modalità di editing specificare il nome utente nel file *crea_utente.sh*
 
 .. code-block:: bash
 
