@@ -23,7 +23,7 @@ Per la creazione di un nuovo utente abbiamo automatizzato quasi tutto utilizzand
 https://gishosting.gter.it/home/form.php 
 
 *Si consiglia pertanto di usare il suddetto form anche quando l'utente si voglia creare in autonomia*. 
-Nel caso in cui l'utente si faccia in autonomia il punto 1 e 4 possono essere tralasciati in quanto la password la si 
+Nel caso in cui l'utente si faccia in autonomia il punto 1 e 5 possono essere tralasciati in quanto la password la si 
 conosce e la mail non è necessaria. Inoltre nel caso in cui si crei in autonomia **non inserire la mail del 
 cliente per evitare riceva delle mail poco comprensibili**; la mail corretta verrà settata a mano acceendo a nextcloud e lizmap
 
@@ -31,11 +31,15 @@ cliente per evitare riceva delle mail poco comprensibili**; la mail corretta ver
 
 Gli unici passi che non sono ancora automatizzati sono:
 
-1) *popolamento dei dati demo su nextcloud* : occorre controllare la password sul DB utenti (DB qgis_gter, schema gishosting_admin) ed entrare su nextcloud, i dati demo vengono creati in automatico 
+1) verificare la password dell'utente sul DB utenti (DB qgis_gter, schema gishosting_admin) 
+
+
+2) *popolamento dei dati demo su nextcloud* : occorre entrare su nextcloud (https://www.gishosting.gter.it/nextcloud) con utente e password recuperati,
+i dati demo vengono creati in automatico 
 
 .. image:: img/new_user1.PNG
 
-2) creare il link web al repository (es. http://www.gishosting.gter.it/comunelegnago) collegandosi al server via ssh (e.g con mobaxterm)
+3) creare il link web al repository (es. https://www.gishosting.gter.it/comunelegnago) collegandosi al server via ssh (e.g con mobaxterm)
 
 .. code-block:: bash
 
@@ -52,7 +56,7 @@ con *nano* o altra modalità di editing specificare il nome utente nel file *cre
 	sh crea_utente.sh
 
 
-3) *assegnare i permessi al repository lizmap* : cercare il repository (sarà l'ultimo creato) cliccare su modifica e assegnare i permessi:
+4) *assegnare i permessi al repository lizmap* : cercare il repository (sarà l'ultimo creato) cliccare su modifica e assegnare i permessi:
 
 .. image:: img/new_user2.PNG
 
@@ -63,7 +67,7 @@ Salvo casi particolari i permessi vanno settati così:
 - altri: admin, gruppo utente creato
 
 
-4) mandare mail con il seguente testo di esempio dall'indirizzo assistenzagis@gter.it (con in cc assistenzagis@gter)
+5) mandare mail con il seguente testo di esempio dall'indirizzo assistenzagis@gter.it (con in cc assistenzagis@gter)
 
 
 .. code-block:: bash
