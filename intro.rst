@@ -30,6 +30,7 @@ cliente per evitare riceva delle mail poco comprensibili**; la mail corretta ver
 
 
 Gli unici passi che non sono ancora automatizzati sono:
+
 1) *popolamento dei dati demo su nextcloud* : occorre controllare la password sul DB utenti (DB qgis_gter, schema gishosting_admin) ed entrare su nextcloud, i dati demo vengono creati in automatico 
 
 .. image:: img/new_user1.PNG
