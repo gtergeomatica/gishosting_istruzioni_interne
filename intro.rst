@@ -371,6 +371,54 @@ Il codice HTML della tabella contente le informazioni di Log estratte tramite le
 Il file **dati_utente.php** viene poi richiamato all'interno del file **/home/gter/qgis_server/dashboard.php** permettendo appunto di visualizzare la griglia di Log nella dashboard dell'utente admin di ASTER.
 
 
+Certbot
+----------------------------------
+
+Certbot è stato installato e viene usato per gestire i certificati usando una guida per ubuntu
+
+Per visualizzare la lista dei certificati
+
+.. code-block:: bash
+
+	sudo certbot certificates
+	 Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Found the following certs:
+  	Certificate Name: gishosting.gter.it
+    Domains: gishosting.gter.it [.....]
+    Expiry Date: 2021-03-29 08:59:14+00:00 (VALID: 73 days)
+    Certificate Path: /etc/letsencrypt/live/gishosting.gter.it/fullchain.pem
+    Private Key Path: /etc/letsencrypt/live/gishosting.gter.it/privkey.pem
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+Per aggiungere certificati:
+
+
+.. code-block:: bash
+
+	sudo certbot -d gishosting.gter.it,www.gishosting.gter.it,[....],new_domain.it
+
+
+GisHosting private
+------------------------------------------------------------------------
+
+Gishosting private presuppone:
+
+- una cartella nextcloud da 300 GB
+- un DB dedicato
+- un client lizmap dedicato
+
+L'installazione base è semplificata da uno script automatico install_private.sh presente nella home. 
+Le operazioni da fare a mano sono:
+
+- aggiunta certificato certbot
+- cambio nome utente e pwd lizmap
+
+Le credenziali dei vari contratti private sono salvate sul nostro NAS. 
+Sul DB nel DB amministratore è presente l'elenco dei contratti private attivi e le indicazioni su domimni e host da cercare.
+
 
 Note finali
 -----------------------------------
